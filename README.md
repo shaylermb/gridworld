@@ -40,9 +40,15 @@ Exercises
     
 Set 2
 1. Sidelength is the length of each side of the box in flowers. 
+
 2. Steps is used with sidelength to decide whether the bug has moved how far it is needed to.
+
 3. Each turn, turns 45 degrees. So when you turn 45 and another 45 you turn 90. This will make the sides of the box straight.
+
 4. It can be called in the class because of inheritence, it has called the same functions has bug actor.
+
 5. No, well it could be. It depends what the user enters in to the side length for the bug.
+
 6. It could change if there was a rock in the middle of the path. Or maybe if it hits another bug.
+
 7. The value of steps will be zero once it reaches the end of the sidelength. When the bug turns the steps gets set back to zero so that the next side can be done.
