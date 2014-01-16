@@ -19,6 +19,7 @@ public class ZBug extends Bug
     {
         steps = 0;
         sideLength = length;
+        setDirection(90);
     }
 
     /**
