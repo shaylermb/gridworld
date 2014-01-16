@@ -52,3 +52,15 @@ Set 2
 6. It could change if there was a rock in the middle of the path. Or maybe if it hits another bug.
 
 7. The value of steps will be zero once it reaches the end of the sidelength. When the bug turns the steps gets set back to zero so that the next side can be done.
+
+Set 3
+1. loc1.getRow();
+2. False
+3. (3,5)
+4. 45 Degrees
+5. You tell it which way, such as Location.South, it gets the location below the selected bug.
+
+Set 4
+1. ArrayList<Location> getOccupiedLocations()
+2. isValid(10,10);
+3 .-
