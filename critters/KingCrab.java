@@ -16,27 +16,41 @@
  * @author Cay Horstmann
  */
 
-import info.gridworld.actor.ActorWorld;
+import info.gridworld.actor.Actor;
 import info.gridworld.actor.Critter;
-import info.gridworld.actor.Flower;
-import info.gridworld.actor.Rock;
+import info.gridworld.grid.Grid;
 import info.gridworld.grid.Location;
 
+
 import java.awt.Color;
+import java.util.ArrayList;
 
 /**
- * This class runs a world that contains critters. <br />
+ * A <code>CrabCritter</code> looks at a limited set of neighbors when it eats and moves.
+ * <br />
  * This class is not tested on the AP CS A and AB exams.
  */
-public class CritterRunner
+public class KingCrab extends CrabCritter
 {
-    public static void main(String[] args)
+    public KingCrab()
     {
-        ActorWorld world = new ActorWorld();
-        // world.add(new Location(5, 5), new Flower(Color.PINK));
-        // world.add(new Location(4, 4), new Critter());
-        world.add(new Location(5,4), new QuickCrab());
-        world.add(new Location(5,2), new Rock());
-        world.show();
+        setColor(Color.BLACK);
+    }
+    public void processActors(ArrayList<Actor> actors){
+        for (Actor a : actors) {
+            Location crab = this.getLocation();
+            int direction = crab.getDirectionToward(a.getLocation());
+            Grid gr = getGrid();
+            Location move = a.getLocation().getAdjacentLocation(direction);
+            if (gr.isValid(move)) {
+                a.moveTo(move);
+            } else {
+                a.removeSelfFromGrid();
+            }
+           
+        }
+
+
+
     }
 }
